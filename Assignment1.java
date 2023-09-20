@@ -7,6 +7,10 @@ inclusive, print everything out
  */ 
 public class Assignment1 {
   public static void main(String[] args) {
+    int farenheit, celcius, randomNumber; // declares variables for fareneit, celcius, and randomNumber
+    String inputString, reverseString;    // declares variables for inputString and reverseString
+
+    
     // prints out initials
     System.out.println("EEEEEEE    CCCCCCCCC");
     System.out.println("EEEEEEE    CCCCCCCCC");
@@ -20,18 +24,18 @@ public class Assignment1 {
     // Fahrenheit to Celsius
     Scanner input = new Scanner(System.in); {
     System.out.println("\nPlease enter a number in degrees Fahrenheit: ");
-    int farenheit = input.nextInt();
-    int celcius = (farenheit - 32) * 5/9; // converts farenheit to celcius
+    farenheit = input.nextInt();
+    celcius = (farenheit - 32) * 5/9;
     
 
     // takes five character string, reverses it and removes the first and last characters
     System.out.println("Please enter a five character string: ");
-    String inputString = input.next();
-    String reverseString = new StringBuilder(inputString.substring(1, 4)).reverse().toString();
+    inputString = input.next();
+    reverseString = new StringBuilder(inputString.substring(1, 4)).reverse().toString();
     
     // asks for a random number between 32 and 16384 inclusive
     Random rand = new Random();
-    int randomNumber = rand.nextInt(16384 - 32 + 1) + 32;
+    randomNumber = rand.nextInt(16384 - 32 + 1) + 32;
    
     // prints out celcius, the string, and the random number
     System.out.println(celcius + " " + reverseString + " " + randomNumber);
